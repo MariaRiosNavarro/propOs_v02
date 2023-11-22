@@ -8,13 +8,13 @@ import { ThemeContext } from "../../pages/_app";
 
 import {
   getComplementaryColor,
+  getSecondaryColor,
   getLightenColor,
   getAnalogousColor,
+  getSecondaryColorLuminosity,
 } from "./changeColorFunctions";
 
-
 //DYNAMICAL STYLES OF THE APLICATION ARE HERE (exception in MyKeyboard: MyKeyboard needs the properties in its own component also for a time-out function, so the dynamic styles that are only used there, I leave them in the same component.)
-
 
 //This will be the general container that will give the style to the app,
 // and through it we will be able to change its appearance.
@@ -65,7 +65,7 @@ export const StyledSvgContainer = styled.div`
   height: 48px;
   width: 48px;
   background-color: ${(props) => {
-   if (props.selected && props.theme === "light") {
+    if (props.selected && props.theme === "light") {
       return "var(--lightAPPSelected)";
     } else if (!props.selected && props.theme === "light") {
       return "var(--lightAPPAktiv)";
@@ -97,6 +97,39 @@ export const StyledSvgContainer = styled.div`
   }};
 
   border-radius: 5px;
+
+  & svg {
+    fill: ${(props) => {
+      if (props.selected && props.theme === "light") {
+        return "var(--svg-color-light)";
+      } else if (!props.selected && props.theme === "light") {
+        return "var(--svg-color-light)";
+      } else if (props.selected && props.theme === "dark") {
+        return "var(--svg-color-dark)";
+      } else if (!props.selected && props.theme === "dark") {
+        return "var(--svg-color-dark)";
+      } else if (props.selected && props.theme === "custom") {
+        const secondaryColor = getComplementaryColor(props.customColor);
+        return secondaryColor;
+      } else if (!props.selected && props.theme === "custom") {
+        const secondaryColor = getComplementaryColor(props.customColor);
+        return secondaryColor;
+      } else {
+        return "transparent";
+      }
+    }};
+    /* stroke: ${(props) => {
+      if (props.selected && props.theme === "custom") {
+        const secondaryColor = getAnalogousColor(props.customColor);
+        return secondaryColor;
+      } else if (!props.selected && props.theme === "custom") {
+        const secondaryColor = getAnalogousColor(props.customColor);
+        return secondaryColor;
+      } else {
+        return "transparent";
+      }
+    }}; */
+  }
 `;
 
 //Apps Headings in "Home":
@@ -215,7 +248,7 @@ export const StyledInputName = styled.input`
   }
 `;
 
-//Contactform 
+//Contactform
 
 export const StyledTextareaGray = styled.textarea`
   background-color: lightgray;
@@ -267,7 +300,7 @@ export const StyledInfo = styled.p`
   margin: 0;
 `;
 
-//AI Page 
+//AI Page
 
 export const StyledAnswer = styled.div`
   background-color: ${(props) => {
