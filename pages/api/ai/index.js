@@ -2,6 +2,7 @@
 import openAiConfig from "../../../utils/openAiConfig";
 
 export default async function handler(request, response) {
+
   try {
     const { question, answer } = request.body;
 
@@ -21,10 +22,11 @@ export default async function handler(request, response) {
     response.status(200).json(responseObject);
   } catch (error) {
     if (error.response) {
-      console.log(error.response.status);
-      console.log(error.response.data);
+      console.log("API response headers", error.response.headers);
+      console.log("error status", error.response.status);
+      console.log("error data", error.response.data);
     } else {
-      console.log(error.message);
+      console.log("error message", error.message);
     }
   }
 }

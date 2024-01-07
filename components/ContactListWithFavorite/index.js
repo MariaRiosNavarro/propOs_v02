@@ -7,7 +7,7 @@ import Tabs from "../Tabs";
 import Badge from "../Badge";
 import { starSVG, starFillSVG } from "../assets/contactsSVG";
 import { useEffect } from "react";
-import contactplaceholder  from "../assets/contactplaceholder.jpg";
+import contactplaceholder from "../assets/contactplaceholder.jpg";
 
 const StyledList = styled.ul`
   list-style: none;
@@ -15,6 +15,7 @@ const StyledList = styled.ul`
   flex-direction: column;
   padding-left: 0;
   margin-top: 0;
+  padding-bottom: 3rem;
 `;
 
 export default function ContactListWithFavorite() {

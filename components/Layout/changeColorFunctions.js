@@ -6,6 +6,7 @@ import tinycolor from "tinycolor2";
 
 export function getComplementaryColor(color) {
   const hex = color.slice(1);
+  // console.log(color);
   const r = parseInt(hex.substr(0, 2), 16);
   const g = parseInt(hex.substr(2, 2), 16);
   const b = parseInt(hex.substr(4, 2), 16);
@@ -22,7 +23,7 @@ export function getComplementaryColor(color) {
 
 export function getSecondaryColor(color) {
   const hex = color.slice(1);
-
+  // console.log(color);
   const r = parseInt(hex.substr(0, 2), 16);
   const g = parseInt(hex.substr(2, 2), 16);
   const b = parseInt(hex.substr(4, 2), 16);
@@ -142,3 +143,65 @@ export function getAnalogousColor(color) {
 
   return newColor;
 }
+
+//--------------
+
+// export function getSecondaryColorLuminosity1(color) {
+//   const hex = color.slice(1);
+//   console.log("hex", hex);
+//   const r = parseInt(hex.substr(0, 2), 16);
+//   const g = parseInt(hex.substr(2, 2), 16);
+//   const b = parseInt(hex.substr(4, 2), 16);
+
+//   const shift = 180;
+
+//   const hsl = rgbToHsl(r, g, b);
+//   console.log("hsl", hsl);
+
+//   console.log("hsl.l", hsl.l);
+
+//   // Ajustar la luminosidad del color secundario
+//   let adjustedLuminosity;
+
+//   if (hsl.l > 25 && hsl.l < 55 && hsl.s > 50 && hsl.s < 55) {
+//     // Realizar el cálculo de ajuste para este rango
+//     adjustedLuminosity = hsl.l;
+
+//     const shiftedHue = (hsl.h + shift) % 360;
+
+//     const shiftedRgb = hslToRgb(shiftedHue, hsl.s, adjustedLuminosity);
+
+//     const shiftedHex = `#${shiftedRgb.r
+//       .toString(16)
+//       .padStart(2, "0")}${shiftedRgb.g
+//       .toString(16)
+//       .padStart(2, "0")}${shiftedRgb.b.toString(16).padStart(2, "0")}`;
+
+//     return shiftedHex;
+//   } else if (hsl.l < 25) {
+//     // Devolver un color amarillo claro
+//     return "#FFFF99"; // Puedes ajustar este valor según tus preferencias
+//   } else {
+//     // Devolver un color naranja oscuro
+//     return "#FF8C00"; // Puedes ajustar este valor según tus preferencias
+//   }
+// }
+
+// export function getSecondaryColorLuminosity(hexColor) {
+//   // Convert hex color to HSL using tinycolor
+//   const hslColor = tinycolor(hexColor).toHsl();
+
+//   // Calculate the complementary color
+//   const hslComplementary = {
+//     h: (hslColor.h + 180) % 360, // Add 180 to hue
+//     s: Math.round(100 - hslColor.s), // Invert saturation
+//     l: Math.round(100 - hslColor.l) / 100, // Invert luminosity
+//   };
+
+//   console.log("comp", hslComplementary);
+
+//   // Convert HSL complementary color to hex
+//   const hexComplementary = tinycolor(hslComplementary).toHexString();
+
+//   return hexComplementary;
+// }

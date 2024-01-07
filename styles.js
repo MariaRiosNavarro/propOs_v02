@@ -16,6 +16,9 @@ export default createGlobalStyle`
     --primary-color:#FFA41B;
     --hover-color: #f86f03; 
     --secondary-color:#525FE1;
+
+    --svg-color-light:#192559;
+    --svg-color-dark:#ffeacc;
     /* Apps */
     --appBg-color:#ffcb7d;
     --bg-color:#ffeacc;
