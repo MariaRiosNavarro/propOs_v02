@@ -6,7 +6,7 @@ import {
 import { addSVG } from "../components/assets/contactsSVG";
 import Navigation from "../components/Navigation";
 import ContactListWithFavorite from "../components/ContactListWithFavorite";
-import AppsHeader from "../components/Appsheader";
+import AppsHeader from "../components/AppsHeader";
 
 const StyledContentContainer = styled.div``;
 

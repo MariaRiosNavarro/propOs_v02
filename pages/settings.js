@@ -5,11 +5,9 @@ import { ThemeContext } from "../pages/_app";
 import Navigation from "../components/Navigation";
 import styled from "styled-components";
 import { AppContainer } from "../components/components.style";
-import AppsHeader from "../components/Appsheader";
-
+import AppsHeader from "../components/AppsHeader";
 
 //-----------------------------------------------STYLE
-
 
 const StyledSmallHeading = styled.h5`
   text-align: center;
@@ -77,7 +75,6 @@ const SytlingBorder = styled.div`
     border: 1px solid var(--hover-color);
   }
 `;
-
 
 //-----------------------------------------------FUNCTION
 

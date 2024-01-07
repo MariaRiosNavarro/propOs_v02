@@ -1,11 +1,10 @@
-
 import {
   AppContainer,
   NoSchrollbarContainer,
 } from "../components/components.style";
 import Navigation from "../components/Navigation";
 import ContactListWithFavorite from "../components/ContactListWithFavorite";
-import AppsHeader from "../components/Appsheader";
+import AppsHeader from "../components/AppsHeader";
 
 //-----------------------------------------------FUNCTION
 

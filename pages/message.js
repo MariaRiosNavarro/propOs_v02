@@ -4,7 +4,7 @@ import {
   AppContainer,
   NoSchrollbarContainer,
 } from "../components/components.style";
-import AppsHeader from "../components/Appsheader";
+import AppsHeader from "../components/AppsHeader";
 
 //-----------------------------------------------FUNCTION
 
