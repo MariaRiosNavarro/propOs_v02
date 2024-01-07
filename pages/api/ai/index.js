@@ -1,8 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import openAiConfig from "../../../utils/openAiConfig";
-console.log("hello");
+
 export default async function handler(request, response) {
-  console.log("hello");
+
   try {
     const { question, answer } = request.body;
 
