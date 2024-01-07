@@ -2,7 +2,7 @@ import useSWR from "swr";
 import styled from "styled-components";
 import { backSVG } from "../../../components/assets/contactsSVG";
 import { StyledLoading } from "../../../components/components.style";
-import AppsHeader from "../../../components/Appsheader";
+import AppsHeader from "../../../components/AppsHeader";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import MyKeyboard from "../../../components/MyKeyboard";
@@ -10,7 +10,6 @@ import Navigation from "../../../components/Navigation";
 import Image from "next/image";
 import contactplaceholder from "../../../components/assets/contactplaceholder.jpg";
 import { PageContainer } from "../../../components/components.style";
-
 
 const StyledAppHeaderContainer = styled.div`
   display: flex;

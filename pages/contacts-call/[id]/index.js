@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 import { callEndSVG } from "../../../components/assets/contactsSVG";
-import { StyledImagePlaceholder } from "../../../components/components.style";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import Link from "next/link";

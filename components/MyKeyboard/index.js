@@ -5,7 +5,7 @@ import "react-simple-keyboard/build/css/index.css";
 import styled from "styled-components";
 import { ThemeContext } from "../../pages/_app";
 import { useContext } from "react";
-import { getLightenColor } from "../Layout/changeColorFunctions";
+// import { getLightenColor } from "../Layout/changeColorFunctions";
 
 // Keyboard: https://hodgef.com/simple-keyboard/getting-started/react/
 
